@@ -55,17 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="AddItemProzor.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EditItemProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GlavniProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="AddItemProzor.xaml.cs">
+      <DependentUpon>AddItemProzor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="EditItemProzor.xaml.cs">
+      <DependentUpon>EditItemProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GlavniProzor.xaml.cs">
+      <DependentUpon>GlavniProzor.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +106,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eAukcija.Model\eAukcija.Model.csproj">
+      <Project>{B94F2967-F600-4884-9679-6F860F9BC58C}</Project>
+      <Name>eAukcija.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eAukcija.ViewModel\eAukcija.ViewModel.csproj">
+      <Project>{ba87dfc7-ccd1-41d8-8dbe-fa1616a3936e}</Project>
+      <Name>eAukcija.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
