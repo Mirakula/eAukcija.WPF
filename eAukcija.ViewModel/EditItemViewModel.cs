@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -169,6 +170,7 @@ namespace eAukcija.ViewModel
 
         public delegate void DoneEventHandler(object sender, DoneEventArgs e);
 
+        [DebuggerStepThrough]
         public class DoneEventArgs : EventArgs
         {
             private string _message;
